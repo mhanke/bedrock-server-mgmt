@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Status </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <section>
+    <ion-button color="success" (click)="start()">
+      <ion-icon slot="start" name="play-outline"></ion-icon>
+      Start
+    </ion-button>
+
+    <ion-button color="danger" (click)="stop()">
+      <ion-icon slot="start" name="stop-outline"></ion-icon>
+      Stop
+    </ion-button>
+  </section>
+
+  <section>
+    <header>Logs</header>
+    <div *ngFor="let log of logs">{{ log }}</div>
+  </section>
+</ion-content>
+
+<my-tabs page="status"></my-tabs>
